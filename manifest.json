@@ -1,0 +1,9 @@
+{
+	"id": "lan-sync",
+	"name": "LAN Sync",
+	"version": "0.1.0",
+	"minAppVersion": "1.0.0",
+	"description": "局域网设备间同步 Obsidian 仓库，支持设备发现、仓库绑定、增量同步和笔记分享",
+	"author": "sxhen",
+	"isDesktopOnly": false
+}

@@ -1,0 +1,393 @@
+/* LAN Sync Plugin Styles */
+
+/* Ribbon icon status indicator (mobile) */
+.lan-sync-ribbon-icon {
+	position: relative;
+}
+
+.lan-sync-ribbon-icon::after {
+	content: '';
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--text-muted);
+	border: 1px solid var(--background-primary);
+}
+
+.lan-sync-ribbon-icon.lan-sync-bound::after {
+	background-color: var(--color-green);
+}
+
+/* Modal base */
+.lan-sync-modal {
+	padding: 16px;
+}
+
+.lan-sync-modal h2 {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+/* Muted text */
+.lan-sync-muted {
+	color: var(--text-muted);
+	font-size: 0.9em;
+}
+
+/* Device list */
+.lan-sync-device-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin: 12px 0;
+}
+
+.lan-sync-device-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 12px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	transition: background-color 0.15s;
+}
+
+.lan-sync-device-item:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+.lan-sync-device-info {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.lan-sync-device-alias {
+	font-weight: 600;
+}
+
+.lan-sync-device-action button {
+	font-size: 0.85em;
+}
+
+/* Status indicators */
+.lan-sync-status {
+	font-size: 0.8em;
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+
+.lan-sync-status-online {
+	color: var(--text-success);
+}
+
+.lan-sync-status-offline {
+	color: var(--text-error);
+}
+
+/* Verification code */
+.lan-sync-verification-code {
+	font-size: 2.5em;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 0.3em;
+	padding: 20px;
+	margin: 16px 0;
+	background: var(--background-secondary);
+	border-radius: 8px;
+	color: var(--text-accent);
+	font-family: monospace;
+}
+
+.lan-sync-code-input {
+	text-align: center;
+	font-size: 1.5em;
+	letter-spacing: 0.2em;
+	font-family: monospace;
+}
+
+/* Share modal */
+.lan-sync-share-msg {
+	font-size: 1.05em;
+	margin: 8px 0;
+}
+
+.lan-sync-share-filename {
+	font-weight: 600;
+	font-size: 1.1em;
+	color: var(--text-accent);
+	padding: 8px 12px;
+	background: var(--background-secondary);
+	border-radius: 6px;
+	display: inline-block;
+	margin: 8px 0;
+}
+
+.lan-sync-button-row {
+	display: flex;
+	gap: 8px;
+	margin-top: 16px;
+	flex-wrap: wrap;
+}
+
+.lan-sync-button-row button {
+	flex: 1;
+	min-width: 80px;
+}
+
+.lan-sync-save-as-container {
+	margin: 8px 0;
+}
+
+/* Blacklist */
+.lan-sync-blacklist {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin: 12px 0;
+}
+
+.lan-sync-blacklist-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px 10px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+}
+
+.lan-sync-blacklist-item button {
+	font-size: 0.8em;
+	color: var(--text-error);
+}
+
+/* Warning button style */
+.mod-warning {
+	color: #fff !important;
+	background-color: var(--background-modifier-error) !important;
+	border-color: var(--background-modifier-error) !important;
+}
+
+.mod-warning:hover {
+	background-color: var(--background-modifier-error-hover) !important;
+}
+
+/* Collapsible sections - unified background with dividers */
+.lan-sync-section {
+	margin-bottom: 16px;
+	background: var(--background-secondary);
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.lan-sync-section-title {
+	font-size: 1.05em;
+	font-weight: 600;
+	padding: 10px 14px;
+	cursor: pointer;
+	user-select: none;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	background: var(--background-secondary);
+}
+
+.lan-sync-section-title::-webkit-details-marker {
+	display: none;
+}
+
+.lan-sync-section-title::before {
+	content: '▶';
+	font-size: 0.65em;
+	margin-right: 8px;
+	transition: transform 0.2s;
+}
+
+.lan-sync-section[open] > .lan-sync-section-title::before {
+	transform: rotate(90deg);
+}
+
+/* Setting items inside section - divider style */
+.lan-sync-section > .setting-item {
+	padding: 10px 14px;
+	border-top: 1px solid var(--background-modifier-border);
+	border-radius: 0;
+	background: transparent;
+}
+
+.lan-sync-section > .setting-item:first-of-type {
+	border-top: none;
+}
+
+.lan-sync-section .setting-item-name {
+	font-weight: 600;
+}
+
+.lan-sync-section .setting-item-description {
+	font-style: italic;
+	color: var(--text-muted);
+}
+
+.lan-sync-section > h3 {
+	padding: 8px 14px 4px;
+	margin: 0;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+/* Sync history */
+.lan-sync-sync-history {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin: 8px 0;
+}
+
+.lan-sync-sync-history-item {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.lan-sync-history-summary {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+	flex-wrap: wrap;
+}
+
+.lan-sync-history-summary:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+.lan-sync-type-send {
+	color: var(--text-accent);
+	font-weight: 600;
+	font-size: 0.85em;
+}
+
+.lan-sync-type-receive {
+	color: var(--color-green);
+	font-weight: 600;
+	font-size: 0.85em;
+}
+
+.lan-sync-history-info {
+	font-size: 0.9em;
+}
+
+/* File list (expanded) */
+.lan-sync-file-list {
+	border-top: 1px solid var(--background-modifier-border);
+	padding: 6px 10px;
+	background: var(--background-secondary);
+}
+
+.lan-sync-file-item {
+	font-size: 0.85em;
+	padding: 2px 0;
+	color: var(--text-muted);
+	font-family: var(--font-monospace);
+	word-break: break-all;
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+}
+
+.lan-sync-file-action {
+	display: inline-block;
+	width: 1.2em;
+	height: 1.2em;
+	line-height: 1.2em;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 0.75em;
+	font-weight: 700;
+	flex-shrink: 0;
+	font-family: var(--font-monospace);
+}
+
+.lan-sync-action-add {
+	color: var(--color-green);
+	background: rgba(0, 128, 0, 0.12);
+}
+
+.lan-sync-action-modify {
+	color: var(--color-yellow);
+	background: rgba(200, 180, 0, 0.12);
+}
+
+.lan-sync-action-del {
+	color: var(--text-faint);
+	background: rgba(128, 128, 128, 0.12);
+}
+
+.lan-sync-file-path {
+	flex: 1;
+	min-width: 0;
+}
+
+/* Pair request notice (compact notification style, top-right) */
+.modal-container:has(.lan-sync-pair-notice) {
+	background: transparent;
+	pointer-events: none;
+}
+
+.modal-container:has(.lan-sync-pair-notice) .modal {
+	position: fixed;
+	top: 24px;
+	right: 24px;
+	width: 320px;
+	max-width: 90vw;
+	margin: 0;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+	pointer-events: auto;
+}
+
+.lan-sync-pair-notice {
+	padding: 12px 16px;
+}
+
+.lan-sync-pair-notice h3 {
+	margin: 0 0 8px;
+	font-size: 1.05em;
+}
+
+.lan-sync-pair-notice p {
+	margin: 0 0 12px;
+	color: var(--text-muted);
+	font-size: 0.95em;
+}
+
+.lan-sync-pair-notice .lan-sync-button-row {
+	margin-top: 0;
+	justify-content: flex-end;
+}
+
+/* 已绑定设备在线/离线状态标识 */
+.lan-sync-status-dot {
+	display: inline-block;
+	font-size: 0.85em;
+	vertical-align: middle;
+	line-height: 1;
+	margin-right: 2px;
+}
+
+.lan-sync-status-online {
+	color: var(--color-green);
+}
+
+.lan-sync-status-offline {
+	color: var(--text-faint);
+}
+
+/* 对方已关闭自动同步提示 */
+.lan-sync-auto-sync-hint {
+	color: var(--text-muted);
+	margin-left: 6px;
+	font-size: 0.9em;
+}
